@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //freopen("input.txt","r",stdin);
+    int t,cnt=0;
+    cin>>t;
+    while(t--)
+    {
+        int a,b,c,d;
+        cin>>a>>b>>c;
+        d=a+b+c;
+        if(d>1)cnt++;
+    }
+    cout<<cnt<<endl;
+    return 0;
+}
