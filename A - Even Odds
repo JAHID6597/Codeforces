@@ -1,0 +1,25 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+    int main()
+     
+    {
+        //freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+        long long n,k,c=1;
+        cin>>n>>k;
+        long a[n],i;
+        if(n%2==0)
+        {
+            if(k<=n/2)
+                cout<<2*k-1<<endl;
+                else
+                    cout<<(k-(n/2))*2<<endl;
+        }
+        else if(n%2!=0)
+        {
+            if(k<=(n/2)+1)
+                cout<<2*k-1<<endl;
+                else
+                    cout<<(k-((n/2)+1))*2<<endl;
+        }
+        return 0;
+    }
