@@ -1,0 +1,45 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+    int main()
+     
+    {
+        //freopen("C:/Users/ANWER/Desktop/input.txt","r",stdin);
+        long long t,n,x=0,p=0,q=0,r=0,m,j,y;
+        cin>>t;
+        while(t--)
+        {
+            cin>>n;
+            long long b[4]= {0};
+            m=1;
+            for(j=2; j*j<=n && m<3; j++)
+            {
+                if(n%j==0)
+                {
+                    b[m++]=j;
+                    n=n/j;
+                }
+            }
+     
+            if(m!=3)
+            {
+                x=0;
+            }
+     
+            else if(n!=b[2] && m==3)
+            {
+                p=b[1];
+                q=b[2];
+                r=n;
+                x=1;
+            }
+            if(x==1)
+            {
+                cout<<"YES"<<endl;
+                cout<<p<<" "<<q<<" "<<r<<endl;
+            }
+            else
+                cout<<"NO"<<endl;
+            x=0;
+        }
+        return 0;
+    }
