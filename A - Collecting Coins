@@ -1,0 +1,17 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+    int main()
+    {
+        int a,b,c,n,t,x;
+        cin>>t;
+        while(t--)
+        {
+            cin>>a>>b>>c>>n;
+            x=a+b+c+n;
+            if(x%3==0 && x>=3*a && x>=3*b && x>=3*c)
+                cout<<"YES"<<endl;
+            else
+                cout<<"NO"<<endl;
+        }
+        return 0;
+    }
