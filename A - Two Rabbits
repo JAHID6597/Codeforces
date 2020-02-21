@@ -1,0 +1,24 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int t;
+        cin>>t;
+        while(t--)
+        {
+            long long x,y,a,b,c=0,f=0;
+            cin>>x>>y>>a>>b;
+            if((y-x) % (a+b) == 0)
+            cout<<(y-x)/(a+b)<<endl;
+            else cout<<-1<<endl;
+        }
+        return 0;
+    }
