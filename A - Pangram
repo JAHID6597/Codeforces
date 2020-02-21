@@ -1,0 +1,35 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
+        transform(s.begin(),s.end(),s.begin(),::toupper);
+        int f=0;
+        sort(s.begin(),s.end());
+        map<char,int> m;
+        map<char,int>::iterator it;
+        for(int i=0;i<s.length();i++)
+        {
+            m.insert( pair<char,int>(s[i],1) );
+        }
+        for(it=m.begin();it!=m.end();it++)
+        {
+            f++;
+        }
+        if(f==26)
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;
+        return 0;
+    }
