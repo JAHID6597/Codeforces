@@ -1,0 +1,27 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int t,f=0;
+        cin>>t;
+        int a[t];
+        for(int i=1;i<=t;i++)
+        {
+            cin>>a[i];
+        }
+        for(int i=1;i<=t;i++)
+        {
+            if(a[i] == 1){f=1;break;}
+        }
+        if(f==1)cout<<"HARD"<<endl;
+        else cout<<"EASY"<<endl;
+        return 0;
+    }
