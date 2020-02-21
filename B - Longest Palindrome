@@ -1,0 +1,43 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int n,m;
+        cin>>n>>m;
+        string s,r,mid,a,tmp;
+        map<string,int> mp;
+        map<string,int>::iterator it;
+        while(n--)
+        {
+            cin>>s;
+            r=s;
+            reverse(r.begin(),r.end());
+            if(r==s)
+                mid=s;
+            else
+            {
+                mp.insert(pair<string,int>(s,m));
+                for(it=mp.begin(); it!=mp.end(); it++)
+                {
+                    if(it->first == r)
+                        a+=r;
+                }
+            }
+        }
+     
+        int sz = a.size()*2+mid.size();
+        cout<<sz<<endl;
+        sz=sz-m;
+        cout<<a<<mid;
+        reverse(a.begin(),a.end());
+        cout<<a<<endl;
+        return 0;
+    }
