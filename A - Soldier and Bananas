@@ -1,0 +1,23 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        long long i,w,n,c,s=0;
+        cin>>w>>n>>c;
+        for(i=1;i<=c;i++)
+        {
+            s+=i*w;
+        }
+        if(s>n)
+            cout<<s-n<<endl;
+        else cout<<0<<endl;
+        return 0;
+    }
