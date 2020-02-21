@@ -1,0 +1,32 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+     
+        int x,y,z,w,a,b,c,u,p;
+        cin>>a>>b>>c;
+        x=a+b*c;
+        y=a*(b+c);
+        z=a*b*c;
+        w=(a+b)*c;
+        u=a+b+c;
+        p=a*b+c;
+        vector<int> v;
+        v.push_back(x);
+        v.push_back(y);
+        v.push_back(z);
+        v.push_back(w);
+        v.push_back(u);
+        v.push_back(p);
+        sort(v.begin(),v.end(),greater<int>());
+        cout<<v[0]<<endl;
+        return 0;
+    }
