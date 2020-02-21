@@ -1,0 +1,25 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int n,f=0,t;
+        cin>>n;
+     
+        if(n%4==0 || n%7==0 || n%47==0  || n%74==0  || n%477==0)
+            f=1;
+     
+        if(f==1)
+            cout<<"YES"<<endl;
+        else if(f==0)
+            cout<<"NO"<<endl;
+     
+        return 0;
+    }
