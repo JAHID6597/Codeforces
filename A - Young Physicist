@@ -1,0 +1,23 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+        int n,x,y,z,xs=0,ys=0,zs=0;
+        cin>>n;
+        while(n--)
+        {
+            cin>>x>>y>>z;
+            xs+=x;
+            ys+=y;
+            zs+=z;
+        }
+        if(xs==0 && ys==0 && zs==0)cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
+     
+    }
