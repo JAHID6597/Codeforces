@@ -1,0 +1,38 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int t,i;
+        cin>>t;
+        while(t--)
+        {
+            int n,d;
+            cin>>n>>d;
+            int a[n];
+            for(i=0; i<n; i++)
+            {
+                cin>>a[i];
+            }
+            i = 1;
+            while(d!=0 && i<n)
+            {
+                if(a[i]!=0 && d>=i)
+                {
+                    a[0]++;
+                    d-=i;
+                    a[i]--;
+                }
+                else i++;
+            }
+            cout<<a[0]<<endl;
+        }
+        return 0;
+    }
