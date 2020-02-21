@@ -1,0 +1,31 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int x,y,c=0;
+        cin>>x>>y;
+        if(x>=y)
+            cout<<x-y<<endl;
+        else
+        {
+            while(x<y)
+            {
+                if(y%2!=0)
+                    y++;
+                else
+                    y/=2;
+                    c++;
+                if(x==y)break;
+            }
+            cout<<c+x-y<<endl;
+        }
+     
+    }
