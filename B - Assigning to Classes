@@ -1,0 +1,29 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+        int t;
+        cin>>t;
+        while(t--)
+        {
+            int n,total,x;
+            cin>>n;
+            total = 2*n;
+            vector<int> v;
+            for(int i=0;i<total;i++)
+            {
+                cin>>x;
+                v.push_back(x);
+            }
+            sort(v.begin(),v.end());
+            cout<<abs(v[n]-v[n-1])<<endl;
+        }
+        return 0;
+    }
