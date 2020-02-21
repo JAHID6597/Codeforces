@@ -1,0 +1,45 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int t;
+        cin>>t;
+        while(t--)
+        {
+            int n,c=0,f=0,te=0;
+            cin>>n;
+            string s,st,cs;
+            cin>>s;
+            for(int i=0,j=0; i<n; i++)
+            {
+                if(s[i]!='0')
+                {
+                    string ch;
+                    ch=s[i];
+                    stringstream ss(ch);
+                    ss>>te;
+                    if(te%2==1)
+                    {
+                        c++;
+                        st[j]=s[i];
+                        j++;
+                    }
+                    if(c==2)
+                        break;
+                }
+            }
+            if(c!=2)
+                cout<<-1<<endl;
+               else if(c==2)
+                cout<<st[0]<<st[1]<<endl;
+        }
+        return 0;
+    }
