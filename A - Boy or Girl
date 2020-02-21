@@ -1,0 +1,30 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+    //#define debug
+    int main()
+     
+    {
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+        string s,s1;
+        map<string,int> ms;
+        map<string,int>::iterator it;
+        int c=0;
+        cin>>s;
+        int len = s.length();
+     
+        for(int i=0; i<len; i++)
+        {
+            s1=s[i];
+            ms.insert( pair <string,int> (s1,c));
+        }
+        for(it=ms.begin(); it!=ms.end(); it++)
+        {
+            ++c;
+        }
+        if(c%2==0)
+            cout<<"CHAT WITH HER!"<<endl;
+        else
+            cout<<"IGNORE HIM!"<<endl;
+    }
