@@ -1,0 +1,32 @@
+
+
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int t;
+        cin>>t;
+        cin.get();
+        while(t--)
+        {
+            string a,b,c;
+            cin>>a>>b>>c;
+            int i,len,cnt=0;
+            len = a.length();
+            for(i=0; i<len; i++)
+            {
+                if(a[i]!=c[i] && b[i]!=c[i])cnt=1;
+            }
+            if(cnt==0)cout<<"YES"<<endl;
+            else cout<<"NO"<<endl;
+        }
+        return 0;
+    }
