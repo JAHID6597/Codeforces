@@ -1,0 +1,47 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+     
+    int main()
+    {
+     
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int t;
+        cin>>t;
+        cin.get();
+        while(t--)
+        {
+            string s;
+            cin>>s;
+            int i,len,l=0,r=0,c=0;
+            len = s.length();
+            for(i=0; i<len; i++)
+            {
+                if(s[i]=='1')
+                    break;
+                else
+                    l++;
+            }
+            reverse(s.begin(),s.end());
+            for(i=0; i<len; i++)
+            {
+                if(s[i]=='1')
+                    break;
+                else
+                    r++;
+            }
+            reverse(s.begin(),s.end());
+            for(i=l; i<len-r; i++)
+            {
+                if(s[i]=='0')
+                    c++;
+            }
+            cout<<c<<endl;
+        }
+        return 0;
+    }
