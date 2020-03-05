@@ -1,0 +1,29 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("input.txt","r",stdin);
+    #endif
+     
+        long long n,mn,mx;
+        cin>>n;
+        vector<long long> v;
+        for(long long i=0; i<n; i++)
+        {
+            long long x;
+            cin>>x;
+            v.push_back(x);
+        }
+        for(long long i=0; i<n; i++)
+        {
+            mn = min(abs(v[i]-v[i+1]),abs(v[i]-v[i-1]));
+            mx = max(abs(v[i]-v[0]),abs(v[i]-v[n-1]));
+            cout<<mn<<" "<<mx<<endl;
+        }
+     
+        return 0;
+    }
