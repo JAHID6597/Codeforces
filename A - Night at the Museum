@@ -1,0 +1,26 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("input.txt","r",stdin);
+    #endif
+     
+        string s;
+        cin>>s;
+        int len = s.length(),p=0,j=0,x,y;
+        char ch = 'a';
+        while(j<len)
+        {
+            x = abs(s[j]-ch);
+            y = 26 - abs(s[j]-ch);
+            ch=s[j];
+            j++;
+            p += min(x,y);
+        }
+        cout<<p;
+        return 0;
+    }
