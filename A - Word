@@ -1,0 +1,42 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("input.txt","r",stdin);
+    #endif
+     
+        string s;
+        cin>>s;
+        char ch;
+        int i,uc=0,lc=0,len;
+        len = s.length();
+        for(i=0; i<len; i++)
+        {
+            if(isupper(s[i]))
+                uc++;
+            else if(islower(s[i]))
+                lc++;
+        }
+     
+        if(uc>lc)
+        {
+            for(i=0; i<len; i++)
+            {
+                ch = toupper(s[i]);
+                cout<<ch;
+            }
+        }
+        else
+        {
+            for(i=0; i<len; i++)
+            {
+                ch = tolower(s[i]);
+                cout<<ch;
+            }
+        }
+        return 0;
+    }
