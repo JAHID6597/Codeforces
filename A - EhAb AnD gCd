@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+//#define debug
+ 
+int main()
+{
+#ifdef debug
+    freopen("input.txt","r",stdin);
+#endif
+ 
+    long long t;
+    cin>>t;
+    while(t--)
+    {
+        long long n;
+        cin>>n;
+        cout<<n-1<<" "<<1<<endl;
+    }
+    return 0;
+}
