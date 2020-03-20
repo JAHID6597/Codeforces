@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+//#define debug
+ 
+int main()
+{
+#ifdef debug
+    freopen("input.txt","r",stdin);
+#endif
+ 
+    long long t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        map<int,int> m;
+        for(int i=0;i<n;i++)
+        {
+            int x;
+            cin>>x;
+            m.insert(pair<int,int>(x,1));
+        }
+        cout<<m.size()<<endl;
+    }
+    return 0;
+}
