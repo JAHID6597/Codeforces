@@ -1,0 +1,34 @@
+    #include<bits/stdc++.h>
+    #include<algorithm>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int n,x=0,p=0,i,j=0;
+        cin>>n;
+        vector<int> v;
+        for(i=0; i<n; i++)
+        {
+            int vl;
+            cin>>vl;
+            v.push_back(vl);
+        }
+        for(i=n; i>0; i/=2)
+            {
+                for(j=0; j<n; j+=i)
+                {
+                    if(is_sorted(v.begin()+j,v.begin()+j+i))
+                    {
+                        cout<<i<<endl;
+                        return 0;
+                    }
+                }
+            }
+     
+    }
