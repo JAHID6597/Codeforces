@@ -1,0 +1,32 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("input.txt","r",stdin);
+    #endif
+        string s;
+        cin>>s;
+        int c=0;
+        for(int i=0; i<s.length(); i++)
+        {
+            if(s[i]=='Q')
+            {
+                for(int j=i+1; j<s.length(); j++)
+                {
+                    if(s[j]=='A')
+                    {
+                        for(int k=j+1; k<s.length(); k++)
+                        {
+                            if(s[k]=='Q')
+                                c++;
+                        }
+                    }
+                }
+            }
+        }
+        cout<<c;
+    }
