@@ -1,0 +1,29 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("input.txt","r",stdin);
+    #endif
+        int x,s2,s3,s4,s5,sc;
+        cin>>x;
+     
+        s5 = x/5;
+        x = x - (s5*5);
+     
+        s4 = x/4;
+        x = x - (s4*4);
+     
+        s3 = x/3;
+        x = x - (s3*3);
+     
+        s2 = x/2;
+        x = x - (s2*2);
+     
+        sc = s5+s4+s3+s2+x;
+     
+        cout<<sc<<endl;
+    }
