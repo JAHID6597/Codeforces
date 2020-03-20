@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+//#define debug
+ 
+int main()
+{
+#ifdef debug
+    freopen("input.txt","r",stdin);
+#endif
+ 
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long x,y;
+        cin>>x>>y;
+        long long d = x - y;
+        if(d>1)
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;
+    }
+    return 0;
+}
