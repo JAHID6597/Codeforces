@@ -1,0 +1,28 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("input.txt","r",stdin);
+    #endif
+        long long d,d100=0,d20=0,d10=0,d5=0,d1=0,dc;
+        cin>>d;
+        d100 = d/100;
+        dc = d - (d100*100);
+     
+        d20 = dc/20;
+        dc = dc - (d20*20);
+     
+        d10 = dc/10;
+        dc = dc - (d10*10);
+     
+        d5 = dc/5;
+        dc = dc - (d5*5);
+     
+        d = (d100+d20+d10+d5+d1)+dc;
+     
+        cout<<d<<endl;
+    }
