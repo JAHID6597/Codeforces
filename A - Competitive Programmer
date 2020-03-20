@@ -1,0 +1,33 @@
+    #include<bits/stdc++.h>
+    #include<algorithm>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("C:/Users/jahid/Desktop/New Text Document.txt","r",stdin);
+    #endif
+     
+        int t;
+        cin>>t;
+        while(t--)
+        {
+            string s;
+            cin>>s;
+            int len = s.length(),sum=0,z=0,e=0;
+            for(int i=0; i<len; i++)
+            {
+                sum+=(s[i]-'0');
+                if((s[i]-'0') == 0)
+                    z++;
+                if((s[i]-'0') % 2 == 0)
+                    e++;
+            }
+            if(sum%3==0 && e>1 && z>=1 || z==len)
+                cout<<"red"<<endl;
+            else
+                cout<<"cyan"<<endl;
+        }
+    }
