@@ -1,0 +1,27 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("input.txt","r",stdin);
+    #endif
+     
+        int t;
+        cin>>t;
+        while(t--)
+        {
+            int n,k,f=0,p;
+            cin>>n>>k;
+            if(n%2 == k%2 && k<=sqrt(n))
+                f=1;
+     
+            if(f == 1)
+                cout<<"YES"<<endl;
+            else
+                cout<<"NO"<<endl;
+        }
+        return 0;
+    }
