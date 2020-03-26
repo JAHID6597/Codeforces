@@ -1,0 +1,28 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+     
+    //#define debug
+     
+    map<string,int> m;
+     
+    int main()
+    {
+    #ifdef debug
+        freopen("input.txt","r",stdin);
+    #endif
+     
+        int t;
+        cin>>t;
+        while(t--)
+        {
+            string s;
+            cin>>s;
+            if(m[s] == 0)
+                cout<<"OK"<<endl;
+            else
+                cout<<s<<m[s]<<endl;
+     
+            m[s]++;
+        }
+        return 0;
+    }
